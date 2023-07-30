@@ -1,0 +1,23 @@
+@use '../custom.scss' as *;
+@use '../components/mixins.scss' as *;
+
+.navbar-brand{
+    img{
+        max-width: 150px;
+        height: auto;
+    }
+}
+
+.menu{
+    @include gradient;
+
+    li{
+        padding: 0 0.7rem;
+
+        a{
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+}

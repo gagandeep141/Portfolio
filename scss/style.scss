@@ -1,0 +1,22 @@
+@use './custom.scss';
+
+// IMPORT THE COMPONENTS
+
+@use './components/animations.scss';
+@use './components/buttons.scss';
+@use './components/mixins.scss';
+@use './components/typograpghy.scss';
+
+// IMPORT THE SECTIONSs
+
+@use './sections/navbar.scss';
+@use './sections/intro-section.scss';
+@use './sections/companies.scss';
+@use './sections/services.scss';
+@use './sections/testimonials.scss';
+@use './sections/faq.scss';
+@use './sections/portfolio.scss';
+@use './sections/profile.scss';
+@use './sections/footer.scss';
+
+

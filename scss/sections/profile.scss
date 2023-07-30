@@ -1,0 +1,80 @@
+@use '../custom.scss' as *;
+@use '../components/mixins.scss' as *;
+
+
+.profile{
+    font-family: 'Poppins',sans-serif;
+    padding: 2rem;
+    background: linear-gradient(to right,rgba($gray-700,0.3),rgba($gray-200,0.5));
+
+    p{color:rgba($gray-800,0.7);margin-bottom: 2rem;}
+
+    h2{
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        background-image: linear-gradient(to right,$primary,$secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 2px solid $secondary;
+        border-radius: 2rem;
+
+        @include media-breakpoint-up(sm){
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .img{
+        max-width: 60%;
+        overflow: hidden;
+        height: auto;
+        border-radius: 1rem;
+        animation: img_border 1s 1s infinite ease-out;
+
+        @keyframes img_border {
+            0%{
+                outline:1px solid rgba($primary,0.6);
+            }
+            100%{
+                outline: 10px solid rgba($primary,0);
+            }
+        }
+
+        img{
+            width:100%;
+            max-height: auto;
+        }
+
+        @include media-breakpoint-up(sm){
+            border-radius: 3rem;
+            display: inline-block;
+        }
+    }
+
+    button{
+        border:2px solid $primary;
+    }
+
+    @include media-breakpoint-up(sm){
+        padding: 4rem;
+    }
+}
+
+
+.moving-arrow{
+    animation: moving 1s 0s infinite;
+}
+
+@keyframes moving {
+    0%{transform: translateY(0);}
+    25%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    75%{transform: translateY(2px);}
+    100%{transform: translateY(0);}
+}
