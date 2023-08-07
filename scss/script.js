@@ -1,5 +1,5 @@
 $(
-    $("nav a").click(function(e){
+    $("nav ul a").click(function(e){
         e.preventDefault();
 
         let id=$(this).attr("href");
